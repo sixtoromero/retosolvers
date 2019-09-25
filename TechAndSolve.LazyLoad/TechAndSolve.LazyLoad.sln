@@ -25,6 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursos", "Recursos", "{CB
 	ProjectSection(SolutionItems) = preProject
 		Recursos\lazy_loading_example_input.txt = Recursos\lazy_loading_example_input.txt
 		Recursos\lazy_loading_example_output.txt = Recursos\lazy_loading_example_output.txt
+		Recursos\lazy_loading_output.txt = Recursos\lazy_loading_output.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechAndSolve.LazyLoad.UnitTest", "TechAndSolve.LazyLoad.UnitTest\TechAndSolve.LazyLoad.UnitTest.csproj", "{755066A3-2058-40A4-8C9F-5B52BC5727B6}"

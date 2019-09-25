@@ -34,13 +34,13 @@ namespace TechAndSolve.LazyLoad.Common.Clases.Helpers
             }
         }
 
-        public static bool setFile(string path, string result)
+        public static bool setFile(string path, string result, string document)
         {
             try
             {
                 using (StreamWriter write = new StreamWriter(path))
-                {
-                    write.WriteLine(result);
+                {   
+                    write.WriteLine("El usuario con documento: " + document + " con fecha " + DateTime.Now.ToLongDateString() + " " + Environment.NewLine + result);
                 }
 
                 return true;

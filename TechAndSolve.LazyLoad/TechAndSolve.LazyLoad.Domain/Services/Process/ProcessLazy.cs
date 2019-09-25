@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using TechAndSolve.LazyLoad.Common.Clases.Helpers;
 using TechAndSolve.LazyLoad.Domain.DTOs;
 
 namespace TechAndSolve.LazyLoad.Domain.Services.Process
@@ -40,11 +42,6 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Process
                         break;
                 }
             }
-             //sbResult.AppendLine($"Case día#{i + 1} : {item.CountTravels} ");
-
-
-
-
 
             return sbResult.ToString();
         }

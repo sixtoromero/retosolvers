@@ -11,4 +11,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TechAndSolve.LazyLoad.Common\TechAndSolve.LazyLoad.Common.csproj" />
+    <ProjectReference Include="..\TechAndSolve.LazyLoad.Domain\TechAndSolve.LazyLoad.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
