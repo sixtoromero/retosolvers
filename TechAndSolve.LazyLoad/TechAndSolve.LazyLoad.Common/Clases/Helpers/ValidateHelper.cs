@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TechAndSolve.LazyLoad.Common.Resources;
 
 namespace TechAndSolve.LazyLoad.Common.Clases.Helpers
 {

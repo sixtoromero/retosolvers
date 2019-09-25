@@ -7,23 +7,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Architecture", "Architectur
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8B603A3F-E5A0-49F7-B578-4741907239D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechAndSolve.LazyLoad.Common", "TechAndSolve.LazyLoad.Common\TechAndSolve.LazyLoad.Common.csproj", "{069B631D-7DAC-429A-BE9D-218B596D9C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechAndSolve.LazyLoad.Common", "TechAndSolve.LazyLoad.Common\TechAndSolve.LazyLoad.Common.csproj", "{069B631D-7DAC-429A-BE9D-218B596D9C9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layers", "Layers", "{799433BC-DA32-48A1-B206-E8653DB9DB7F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Domain", "1. Domain", "{C065D0D8-B25D-43AA-A302-2F95F1E86F7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechAndSolve.LazyLoad.Domain", "TechAndSolve.LazyLoad.Domain\TechAndSolve.LazyLoad.Domain.csproj", "{A11AE261-1436-4FD6-BE05-5F3199C36BC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechAndSolve.LazyLoad.Domain", "TechAndSolve.LazyLoad.Domain\TechAndSolve.LazyLoad.Domain.csproj", "{A11AE261-1436-4FD6-BE05-5F3199C36BC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Presentation", "2. Presentation", "{E6E10875-43DD-4DDE-9A7A-4FB0BC2F6AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechAndSolve.LazyLoad.WebAPIRest", "TechAndSolve.LazyLoad.WebAPIRest\TechAndSolve.LazyLoad.WebAPIRest.csproj", "{B7702C97-D292-4E20-8742-038EFF374D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechAndSolve.LazyLoad.WebAPIRest", "TechAndSolve.LazyLoad.WebAPIRest\TechAndSolve.LazyLoad.WebAPIRest.csproj", "{B7702C97-D292-4E20-8742-038EFF374D12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Unit Tests", "3. Unit Tests", "{5183E2DB-2274-467D-8AF8-3FAB17227A9D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursos", "Recursos", "{CBB8BB47-0236-4CBB-A0BB-AC4C7D374539}"
+	ProjectSection(SolutionItems) = preProject
+		Recursos\lazy_loading_example_input.txt = Recursos\lazy_loading_example_input.txt
+		Recursos\lazy_loading_example_output.txt = Recursos\lazy_loading_example_output.txt
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechAndSolve.LazyLoad.UnitTest", "TechAndSolve.LazyLoad.UnitTest\TechAndSolve.LazyLoad.UnitTest.csproj", "{755066A3-2058-40A4-8C9F-5B52BC5727B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechAndSolve.LazyLoad.UnitTest", "TechAndSolve.LazyLoad.UnitTest\TechAndSolve.LazyLoad.UnitTest.csproj", "{755066A3-2058-40A4-8C9F-5B52BC5727B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
