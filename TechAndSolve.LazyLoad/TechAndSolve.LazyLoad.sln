@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Architecture", "Architecture", "{9876BE5A-9971-4400-AFD9-7A1A3D9FC683}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8B603A3F-E5A0-49F7-B578-4741907239D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechAndSolve.LazyLoad.Common", "TechAndSolve.LazyLoad.Common\TechAndSolve.LazyLoad.Common.csproj", "{069B631D-7DAC-429A-BE9D-218B596D9C9A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{069B631D-7DAC-429A-BE9D-218B596D9C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069B631D-7DAC-429A-BE9D-218B596D9C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069B631D-7DAC-429A-BE9D-218B596D9C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069B631D-7DAC-429A-BE9D-218B596D9C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B603A3F-E5A0-49F7-B578-4741907239D9} = {9876BE5A-9971-4400-AFD9-7A1A3D9FC683}
+		{069B631D-7DAC-429A-BE9D-218B596D9C9A} = {8B603A3F-E5A0-49F7-B578-4741907239D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21FC6B17-33F1-4813-9098-FA445A579BD0}
