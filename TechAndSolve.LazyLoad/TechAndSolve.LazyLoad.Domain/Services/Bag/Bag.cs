@@ -66,8 +66,7 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                         }
                         break;
                     case 4:
-
-                        //foreach (var wi in item.WeightByElement)
+                    case 5:
                         for (int i = 0; i < item.WeightByElement.Count; i++)
                         {
                             if (item.WeightByElement[i].Weight >= int.Parse(RanksResources.MaxWeight))
@@ -104,8 +103,6 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                                 }
                             }
                         }
-                        break;
-                    default:
                         break;
                 }
             }
