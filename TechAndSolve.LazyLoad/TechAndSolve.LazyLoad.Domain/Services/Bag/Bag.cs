@@ -36,6 +36,7 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                             iBag.MaxWeight = item.WeightByElement[0].Weight;
                             iBag.MinWeight = item.WeightByElement[item.WeightByElement.Count - (x + 1)].Weight;
                             iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
+                            iBag.CountTravels = item.WeightByElement.Count / 2;
                             liBag.Add(iBag);
                         }
                         break;
@@ -45,6 +46,7 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                         iBag.Day = day;
                         iBag.MaxWeight = item.WeightByElement.Sum(s => s.Weight);
                         iBag.MinWeight = 0;
+                        iBag.CountTravels = 1;
                         iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
                         liBag.Add(iBag);
 
@@ -59,6 +61,7 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                             iBag.Day = day;
                             iBag.MaxWeight = item.WeightByElement[x].Weight;
                             iBag.MinWeight = 0;
+                            iBag.CountTravels = liBag.GroupBy(g => g.IsPair).ToList().Count; 
                             iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
                             iBag.IsPair = ValidateHelper.IsPair(item.WeightByElement[x].Weight);
 
@@ -94,9 +97,11 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                                 iBag.IdWeightMin = item.WeightByElement[item.WeightByElement.Count - i].IdWeight;
                                 iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
 
-                                if (liBag.Where(w => w.IdWeightMax == iBag.IdWeightMax || w.IdWeightMin == iBag.IdWeightMax).ToList().Count == 0)
+                                //if (liBag.Where(w => w.IdWeightMax == iBag.IdWeightMax || w.IdWeightMin == iBag.IdWeightMax).ToList().Count == 0)
+                                if (liBag.Where(w => w.IdWeightMax == iBag.IdWeightMax).ToList().Count == 0)
                                 {
-                                    if (liBag.Where(w => w.IdWeightMin == iBag.IdWeightMin || w.IdWeightMin == iBag.IdWeightMin).ToList().Count == 0)
+                                    //if (liBag.Where(w => w.IdWeightMin == iBag.IdWeightMin || w.IdWeightMax == iBag.IdWeightMin).ToList().Count == 0)
+                                    if (liBag.Where(w => w.IdWeightMin == iBag.IdWeightMin).ToList().Count == 0)
                                     {
                                         liBag.Add(iBag);
                                     }
@@ -107,7 +112,9 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                 }
             }
 
-            return null;
+            return liBag;
         }
+
+
     }
 }

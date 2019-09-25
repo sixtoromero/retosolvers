@@ -31,5 +31,7 @@ namespace TechAndSolve.LazyLoad.Domain.DTOs
         /// Valida si es par o no
         /// </summary>
         public bool IsPair { get; set; }
+
+        public int CountTravels { get; set; }
     }
 }

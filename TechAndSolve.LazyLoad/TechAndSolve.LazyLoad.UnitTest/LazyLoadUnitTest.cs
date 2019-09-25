@@ -1,6 +1,7 @@
 using System;
 using TechAndSolve.LazyLoad.Domain.Services.Bag;
 using TechAndSolve.LazyLoad.Domain.Services.DataFile;
+using TechAndSolve.LazyLoad.Domain.Services.Process;
 using Xunit;
 
 namespace TechAndSolve.LazyLoad.UnitTest
@@ -14,6 +15,9 @@ namespace TechAndSolve.LazyLoad.UnitTest
             var result = iCal.GetResult();
             Bag oBag = new Bag(result);
             var liBag = oBag.BagTravels();
+
+            ProcessLazy pro = new ProcessLazy(liBag);
+            var sbResult = pro.GetResult();
         }
     }
 }
