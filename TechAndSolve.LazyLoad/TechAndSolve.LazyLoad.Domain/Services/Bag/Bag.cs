@@ -77,69 +77,33 @@ namespace TechAndSolve.LazyLoad.Domain.Services.Bag
                                 iBag.IdWeightMin = 0;
                                 iBag.Day = day;
                                 iBag.MaxWeight = item.WeightByElement[i].Weight;
-                                iBag.MinWeight = item.WeightByElement[item.WeightByElement.Count - i].Weight;
+                                iBag.MinWeight = item.WeightByElement[item.WeightByElement.Count - (i + 1)].Weight;
                                 iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
-                                liBag.Add(iBag);
 
-                                //item.WeightByElement.Remove(wi);
+                                if (liBag.Where(w => w.IdWeightMax == iBag.IdWeightMax && w.IdWeightMin == iBag.IdWeightMin).ToList().Count == 0)
+                                {
+                                    liBag.Add(iBag);
+                                }
                             }
                             else
                             {
-                                //var respMax = item.WeightByElement.Where(w => w.Weight == item.WeightByElement.Max(m => m.Weight)).FirstOrDefault();
-                                //var liWeightMax = liBag.Where(b => b.IdWeightMax == wi.IdWeight).ToList();
-
-                                //var respMin = item.WeightByElement.Where(w => w.Weight == item.WeightByElement.Min (m => m.Weight)).FirstOrDefault();
-                                //var liWeightMin = liBag.Where(b => b.IdWeightMin == respMin.IdWeight).ToList();
-                                //var resMax = item.WeightByElement.Where(w => w.Weight == item.WeightByElement.Max(m => m.Weight)).FirstOrDefault();
-
                                 iBag = new BagDTO();
-                                iBag.IdWeightMax = item.WeightByElement[i + 1].IdWeight;
+                                iBag.IdWeightMax = item.WeightByElement[i].IdWeight;
                                 iBag.Day = day;
-                                iBag.MaxWeight = item.WeightByElement[i + 1].Weight;
+                                iBag.MaxWeight = item.WeightByElement[i].Weight;
                                 iBag.MinWeight = item.WeightByElement[item.WeightByElement.Count - i].Weight;
                                 iBag.IdWeightMin = item.WeightByElement[item.WeightByElement.Count - i].IdWeight;
                                 iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
-                                liBag.Add(iBag);
 
-                                //var resMin = item.WeightByElement.Where(w => w.Weight == item.WeightByElement.Min(m => m.Weight)).FirstOrDefault();
-
-
-                                //item.WeightByElement.Remove(wi);
-                                //item.WeightByElement.Remove(item.WeightByElement.Where(mwi => mwi.Weight == item.WeightByElement.Min(m => m.Weight)).FirstOrDefault());
+                                if (liBag.Where(w => w.IdWeightMax == iBag.IdWeightMax || w.IdWeightMin == iBag.IdWeightMax).ToList().Count == 0)
+                                {
+                                    if (liBag.Where(w => w.IdWeightMin == iBag.IdWeightMin || w.IdWeightMin == iBag.IdWeightMin).ToList().Count == 0)
+                                    {
+                                        liBag.Add(iBag);
+                                    }
+                                }
                             }
                         }
-
-                        //for (int x = 0; x < item.WeightByElement.Count; x++)
-                        //{
-                        //    if (item.WeightByElement[x].Weight >= int.Parse(RanksResources.MaxWeight))
-                        //    {
-                        //        iBag = new BagDTO();
-                        //        iBag.Day = day;
-                        //        iBag.MaxWeight = item.WeightByElement[x].Weight;
-                        //        iBag.MinWeight = 0;
-                        //        iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
-
-                        //        liBag.Add(iBag);
-
-                        //        item.WeightByElement.RemoveAt(x);
-                        //    }
-                        //    else
-                        //    {
-                        //        iBag = new BagDTO();
-                        //        iBag.Day = day;
-                        //        iBag.MaxWeight = item.WeightByElement.Max(m => m.Weight);
-                        //        iBag.MinWeight = item.WeightByElement.Min(m => m.Weight);
-                        //        //iBag.MaxWeight = item.WeightByElement[x].Weight;
-                        //        //iBag.MinWeight = item.WeightByElement[item.WeightByElement.Count - (x + 1)].Weight;
-                        //        iBag.IsValidate = ValidateHelper.Validate("Wi", iBag.MaxWeight);
-
-                        //        liBag.Add(iBag);
-
-                        //        item.WeightByElement.RemoveAt(x);
-                        //        item.WeightByElement.RemoveAt(item.WeightByElement.Count - (x + 1));
-
-                        //    }
-                        //}
                         break;
                     default:
                         break;
