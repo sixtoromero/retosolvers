@@ -10,7 +10,7 @@ namespace TechAndSolve.LazyLoad.UnitTest
         [Fact]
         public void LazyLoad()
         {
-            DataFile iCal = new DataFile(@"D:\Pruebas tecnicas\TechAndSolve\TechAndSolve\TechAndSolve.LazyLoad\Recursos\lazy_loading_example_input.txt");
+            DataFile iCal = new DataFile(@"D:\techandsolve\TechAndSolve.LazyLoad\Recursos\lazy_loading_example_input.txt");
             var result = iCal.GetResult();
             Bag oBag = new Bag(result);
             var liBag = oBag.BagTravels();
